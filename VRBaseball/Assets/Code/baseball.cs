@@ -15,12 +15,34 @@ public class baseball : MonoBehaviour {
 	private bool shoot = false;
 	// Use this for initialization
 	void Start () {
-//	Physics.Raycast()
-	}
+        //this.transform.position = ( 11.214 , 2.135 , 29.17);
+        this.GetComponent<Rigidbody>().useGravity = false;
+        Fx = 85;
+        Fy = 60;
+        Fz = -300;
+        Tx = 10000;
+        Ty = 0;
+        Tz = 50;
+        ConstantForceX = -1;
+        ConstantForceY = 0;
+        ConstantForceZ = 0;
+
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.Q)) {
+        /*if (this.GetComponent<Rigidbody>().detectCollisions == true)
+        {
+            //this.GetComponent<ConstantForce>().enabled = false;
+            ConstantForceZ = 500;
+            ConstantForceX *= -1;
+            //ConstantForceY *=
+            OnCollectionEnter
+
+        }*/
+
+        if (Input.GetKey (KeyCode.Q)) {
 			//shoot = false;
 			this.GetComponent<ConstantForce> ().enabled = false;
 			this.GetComponent<Rigidbody>().isKinematic = true;
@@ -32,7 +54,7 @@ public class baseball : MonoBehaviour {
 		}
 
 		if (Input.GetKeyUp (KeyCode.Space) || SteamVR_Controller.Input(3).GetPressDown(Valve.VR.EVRButtonId.k_EButton_SteamVR_Trigger)) {
-            this.GetComponent<Rigidbody> ().useGravity = true;
+			this.GetComponent<Rigidbody> ().useGravity = true;
 			this.GetComponent<Rigidbody>().AddForce(Fx, Fy, Fz);
 			this.GetComponent<ConstantForce> ().enabled = true;
 			this.GetComponent<ConstantForce> ().force = new Vector3 (ConstantForceX, ConstantForceY, ConstantForceZ);
@@ -71,7 +93,7 @@ public class baseball : MonoBehaviour {
 		}
 	}
 
-	/*void FixedUpdate ()
+    /*void FixedUpdate ()
 	{
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			this.GetComponent<Rigidbody>().AddTorque(Tx ,Ty ,Tz , ForceMode.VelocityChange);
@@ -80,8 +102,29 @@ public class baseball : MonoBehaviour {
 		}
 	}*/
 
-	/*
+    /*
 	 * GameObject.Find(ball).GetComponent<Rigidbody>().isKinematic = false;
 		GameObject.Find(ball).GetComponent<Rigidbody>().AddForce(xFource * fourcRate * reverseXFource, yFource * fourcRate, zFource * fourcRate * reverseZFource);
 	 */
+    int qq = 0;
+    void OnTriggerEnter(Collider BaseballBat)
+    {
+        if (qq == 0)
+        {
+            Fz = 1000;
+            Fx = 0;
+            Fy = 600;
+            Tx = 0;
+            Ty = 0;
+            Tz = 0;
+            ConstantForceX = 0;
+            ConstantForceY = 0;
+            ConstantForceZ = 0;
+            this.GetComponent<Rigidbody>().useGravity = true;
+            this.GetComponent<Rigidbody>().AddForce(Fx, Fy, Fz);
+            this.GetComponent<ConstantForce>().enabled = true;
+            this.GetComponent<ConstantForce>().force = new Vector3(ConstantForceX, ConstantForceY, ConstantForceZ);
+            qq += 1;
+        }
+    }
 }
