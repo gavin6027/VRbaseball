@@ -1,0 +1,109 @@
+fileFormatVersion: 2
+guid: b848d1339736a514c821b23665d392f2
+timeCreated: 1473158575
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BaseballField
+    100002: BaseballStadium
+    100004: //RootNode
+    100006: FirstBase
+    100008: Homebase
+    100010: PitcherBarrier
+    100012: SecondBase
+    100014: Thirdbase
+    400000: BaseballField
+    400002: BaseballStadium
+    400004: //RootNode
+    400006: FirstBase
+    400008: Homebase
+    400010: PitcherBarrier
+    400012: SecondBase
+    400014: Thirdbase
+    2300000: BaseballField
+    2300002: BaseballStadium
+    2300004: FirstBase
+    2300006: Homebase
+    2300008: PitcherBarrier
+    2300010: SecondBase
+    2300012: Thirdbase
+    3300000: BaseballField
+    3300002: BaseballStadium
+    3300004: FirstBase
+    3300006: Homebase
+    3300008: PitcherBarrier
+    3300010: SecondBase
+    3300012: Thirdbase
+    4300000: SecondBase
+    4300002: Thirdbase
+    4300004: FirstBase
+    4300006: PitcherBarrier
+    4300008: Homebase
+    4300010: BaseballField
+    4300012: BaseballStadium
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
